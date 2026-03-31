@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-	--color-oxford-navy: #154284; /* Adjusted slightly to match your specific image */
+	--color-oxford-navy: #154284;
 	--color-lavender-mist: #f5f2f7;
 	--color-onyx: #090b09;
+
+	/* Register the fonts natively into Tailwind */
+	--font-anton: "Anton", sans-serif;
+	--font-inter: "Inter", sans-serif;
 }
 
 body {
-	font-family: "Anton", sans-serif;
 	background-color: var(--color-oxford-navy);
 	color: var(--color-lavender-mist);
+	/* Inter is now the default for all standard text and UI */
+	font-family: var(--font-inter);
 }
