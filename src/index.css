@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+	--color-oxford-navy: #154284; /* Adjusted slightly to match your specific image */
+	--color-lavender-mist: #f5f2f7;
+	--color-onyx: #090b09;
+}
+
+body {
+	font-family: "Anton", sans-serif;
+	background-color: var(--color-oxford-navy);
+	color: var(--color-lavender-mist);
+}
