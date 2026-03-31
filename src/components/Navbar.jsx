@@ -21,6 +21,12 @@ export default function Navbar() {
 					Legacy
 				</a>
 				<a
+					href="#destination"
+					className="hover:text-white transition-colors duration-300"
+				>
+					Destination
+				</a>
+				<a
 					href="#sponsor"
 					className="hover:text-white transition-colors duration-300"
 				>

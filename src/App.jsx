@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AuthorityBar from "./components/AuthorityBar";
 import Legacy from "./components/Legacy";
+import Destination from "./components/Destination";
 
 export default function App() {
 	return (
@@ -13,9 +14,8 @@ export default function App() {
 			</div>
 
 			<AuthorityBar />
-
-			{/* Drops in right below the Authority Bar */}
 			<Legacy />
+			<Destination />
 		</main>
 	);
 }
