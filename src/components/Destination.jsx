@@ -53,11 +53,11 @@ export default function Destination() {
 			id="destination"
 			className="w-full bg-[#050605] py-24 px-8 md:px-12 flex flex-col justify-between min-h-screen border-t border-white/10 relative overflow-hidden"
 		>
-			<div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#dc143c] to-transparent opacity-20 transform -rotate-12"></div>
+			<div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#0a1b3a] to-transparent opacity-20 transform -rotate-12"></div>
 
 			<div className="max-w-7xl mx-auto w-full space-y-2 relative z-10 intro-text">
-				<h4 className="font-inter font-bold text-xl md:text-2xl text-[#dc143c] tracking-widest uppercase flex items-center gap-4">
-					<span className="w-12 h-px bg-[#dc143c] inline-block"></span> Destination
+				<h4 className="font-inter font-bold text-xl md:text-2xl text-[#406eb5] tracking-widest uppercase flex items-center gap-4">
+					<span className="w-12 h-px bg-[#406eb5] inline-block"></span> Destination
 				</h4>
 				<h2 ref={titleRef} className="font-anton font-black text-5xl md:text-7xl lg:text-[6rem] text-white tracking-tight uppercase leading-none mix-blend-difference z-20 relative pt-4">
 					Buddh International<br/>Circuit 2026
@@ -71,7 +71,7 @@ export default function Destination() {
 				<Canvas camera={{ position: [0, 80, 120], fov: 45 }}>
 					<ambientLight intensity={1.5} />
 					<directionalLight position={[10, 20, 10]} intensity={3} color="#ffffff" />
-					<directionalLight position={[-10, 5, -10]} intensity={2} color="#dc143c" />
+					<directionalLight position={[-10, 5, -10]} intensity={2} color="#406eb5" />
 
 					<Environment preset="city" />
 

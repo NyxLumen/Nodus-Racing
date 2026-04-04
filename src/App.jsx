@@ -60,7 +60,7 @@ export default function App() {
 	}, []);
 
 	return (
-		<main className="w-full flex flex-col min-h-screen bg-[#050605] overflow-x-hidden selection:bg-[#dc143c] selection:text-[#f5f2f7]">
+		<main className="w-full flex flex-col min-h-screen bg-[#050605] overflow-x-hidden selection:bg-[#0a1b3a] selection:text-[#f5f2f7]">
 			<CustomCursor />
 			<div className="relative h-screen w-full bg-[#050605] overflow-hidden flex flex-col">
 				<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-oxford-navy)_0%,_#050605_60%)] opacity-30 z-0 mix-blend-color-dodge"></div>

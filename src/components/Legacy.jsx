@@ -58,7 +58,7 @@ export default function Legacy() {
 				<div className="legacy-block flex flex-col md:flex-row items-center gap-10 md:gap-16">
 					<div className="flex-1 space-y-6">
 						<h3 className="reveal-text font-inter font-bold text-3xl md:text-5xl tracking-tight uppercase flex items-center gap-4">
-							Aerox <span className="text-crimson-red">//</span> Raw Dynamics
+							Aerox <span className="text-[#406eb5]">//</span> Raw Dynamics
 						</h3>
 						<p className="reveal-text font-inter text-lg md:text-xl leading-relaxed text-[#050605]/80 max-w-xl">
 							Forged in the rigorous environment of Formula Student, the AeroX
@@ -69,7 +69,7 @@ export default function Legacy() {
 					</div>
 					<div className="flex-1 w-full">
 						<div className="image-reveal w-full aspect-[4/3] bg-black/10 rounded-none overflow-hidden drop-shadow-sm flex items-center justify-center group hover-target relative will-change-transform">
-							<div className="absolute inset-0 border-[4px] border-transparent group-hover:border-[#dc143c] transition-colors duration-500 z-10 pointer-events-none"></div>
+							<div className="absolute inset-0 border-[4px] border-transparent group-hover:border-[#0a1b3a] transition-colors duration-500 z-10 pointer-events-none"></div>
 							<img src="/pictures/aerox-car.png" alt="AeroX on track" className="w-full h-full object-cover" />
 						</div>
 					</div>
@@ -78,7 +78,7 @@ export default function Legacy() {
 				<div className="legacy-block flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16">
 					<div className="flex-1 space-y-6">
 						<h3 className="reveal-text font-inter font-bold text-3xl md:text-5xl tracking-tight uppercase">
-							Hypergreen <span className="text-crimson-red">//</span>
+							Hypergreen <span className="text-[#406eb5]">//</span>
 							<br />
 							Ruthless Efficiency
 						</h3>
@@ -91,7 +91,7 @@ export default function Legacy() {
 					</div>
 					<div className="flex-1 w-full relative">
 						<div className="image-reveal w-full aspect-[4/3] bg-black/10 rounded-none overflow-hidden drop-shadow-sm flex items-center justify-center group hover-target relative will-change-transform">
-							<div className="absolute inset-0 border-[4px] border-transparent group-hover:border-[#dc143c] transition-colors duration-500 z-10 pointer-events-none"></div>
+							<div className="absolute inset-0 border-[4px] border-transparent group-hover:border-[#0a1b3a] transition-colors duration-500 z-10 pointer-events-none"></div>
 							<img src="/pictures/hypergreen-car.jpg" alt="Hypergreen concept" className="w-full h-full object-cover" />
 						</div>
 					</div>

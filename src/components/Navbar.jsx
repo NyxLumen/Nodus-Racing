@@ -61,7 +61,7 @@ export default function Navbar() {
 						className="group relative hover:text-white transition-colors duration-300 p-2 block"
 					>
 						{item.name}
-						<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#dc143c] rounded-full opacity-0 transform scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100"></span>
+						<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#406eb5] rounded-full opacity-0 transform scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100"></span>
 					</a>
 				))}
 			</div>

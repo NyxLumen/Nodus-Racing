@@ -44,8 +44,8 @@ export default function Pipeline() {
 					</h2>
 				</div>
 				
-				<div className="mt-16 md:mt-auto border-l-2 border-[#dc143c] pipe-line pl-6 md:pl-8 max-w-md ml-auto text-left relative">
-					<span className="pipe-content font-inter font-bold text-[#dc143c] tracking-widest uppercase text-xs md:text-sm block mb-4">
+				<div className="mt-16 md:mt-auto border-l-2 border-[#0a1b3a] pipe-line pl-6 md:pl-8 max-w-md ml-auto text-left relative">
+					<span className="pipe-content font-inter font-bold text-[#406eb5] tracking-widest uppercase text-xs md:text-sm block mb-4">
 						Strategic Acquisition
 					</span>
 					<p className="pipe-content font-inter text-lg md:text-xl text-white/90 leading-relaxed font-light">
@@ -68,7 +68,7 @@ export default function Pipeline() {
 				{/* Clean un-obscured image frame */}
 				<div className="flex-1 w-full h-full relative flex flex-col items-center justify-center">
 					<div className="pipe-image w-full h-full min-h-[400px] max-h-[70vh] rounded-none overflow-hidden bg-black/5 shadow-2xl relative hover-target will-change-transform">
-						<div className="absolute inset-0 bg-[#dc143c] mix-blend-overlay opacity-0 hover:opacity-30 transition-opacity duration-500 z-10 pointer-events-none"></div>
+						<div className="absolute inset-0 bg-[#0a1b3a] mix-blend-overlay opacity-0 hover:opacity-30 transition-opacity duration-500 z-10 pointer-events-none"></div>
 						<img 
 							src="/pictures/pipeline.jpg" 
 							alt="Nodus Racing Talent Pipeline" 

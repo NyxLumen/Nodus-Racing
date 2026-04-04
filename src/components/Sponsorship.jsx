@@ -99,7 +99,7 @@ export default function Sponsorship() {
 				{/* Header Section */}
 				<div className="sponsor-header flex flex-col md:flex-row md:items-end justify-between border-b-[2px] border-white/10 pb-6 mb-8">
 					<div className="uppercase">
-						<h3 className="font-inter font-bold text-[#dc143c] tracking-[0.2em] mb-2 text-sm">// JOIN THE GRID</h3>
+						<h3 className="font-inter font-bold text-[#406eb5] tracking-[0.2em] mb-2 text-sm">// JOIN THE GRID</h3>
 						<h2 className="font-anton text-5xl md:text-7xl lg:text-8xl text-white tracking-widest pr-4 leading-none uppercase">
 							SPONSORSHIP
 						</h2>
