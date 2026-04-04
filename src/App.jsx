@@ -5,6 +5,7 @@ import AuthorityBar from "./components/AuthorityBar";
 import Legacy from "./components/Legacy";
 import Destination from "./components/Destination";
 import Pipeline from "./components/Pipeline";
+import Sponsorship from "./components/Sponsorship";
 
 export default function App() {
 	return (
@@ -18,6 +19,7 @@ export default function App() {
 			<Legacy />
 			<Destination />
 			<Pipeline />
+			<Sponsorship />
 		</main>
 	);
 }
