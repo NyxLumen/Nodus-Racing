@@ -31,8 +31,8 @@ export default function Legacy() {
 						</p>
 					</div>
 					<div className="flex-1 w-full">
-						<div className="w-full aspect-[4/3] bg-black/10 rounded-2xl overflow-hidden drop-shadow-sm flex items-center justify-center">
-							{/* <img src="/pictures/aerox.jpg" alt="AeroX on track" className="w-full h-full object-cover" /> */}
+						<div className="w-full aspect-[4/3] bg-black/10 rounded-2xl overflow-hidden drop-shadow-sm flex items-center justify-center group cursor-pointer hover:shadow-xl transition-shadow duration-300">
+							<img src="/pictures/aerox-car.png" alt="AeroX on track" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
 						</div>
 					</div>
 				</div>
@@ -53,8 +53,8 @@ export default function Legacy() {
 						</p>
 					</div>
 					<div className="flex-1 w-full">
-						<div className="w-full aspect-[4/3] bg-black/10 rounded-2xl overflow-hidden drop-shadow-sm flex items-center justify-center">
-							{/* <img src="/pictures/hypergreen.jpg" alt="Hypergreen concept" className="w-full h-full object-cover" /> */}
+						<div className="w-full aspect-[4/3] bg-black/10 rounded-2xl overflow-hidden drop-shadow-sm flex items-center justify-center group cursor-pointer hover:shadow-xl transition-shadow duration-300">
+							<img src="/pictures/hypergreen-car.jpg" alt="Hypergreen concept" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
 						</div>
 					</div>
 				</div>
