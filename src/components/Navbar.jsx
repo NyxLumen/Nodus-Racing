@@ -48,14 +48,19 @@ export default function Navbar() {
 			</div>
 
 			<div className="flex gap-12 text-xs font-light tracking-[0.2em] uppercase text-white/60 font-inter">
-				{['Legacy', 'Destination', 'Sponsor', 'Contact'].map((item) => (
+				{[
+					{ name: 'Legacy', path: '#legacy' },
+					{ name: 'Destination', path: '#destination' },
+					{ name: 'Sponsorship', path: '#sponsorship' },
+					{ name: 'Contact', path: '#footer' }
+				].map((item) => (
 					<a
-						key={item}
-						href={`#${item.toLowerCase()}`}
+						key={item.name}
+						href={item.path}
 						ref={addToRefs}
 						className="group relative hover:text-white transition-colors duration-300 p-2 block"
 					>
-						{item}
+						{item.name}
 						<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#dc143c] rounded-full opacity-0 transform scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100"></span>
 					</a>
 				))}

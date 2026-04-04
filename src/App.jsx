@@ -32,7 +32,28 @@ export default function App() {
 
 		gsap.ticker.lagSmoothing(0);
 
+		const handleGlobalAnchorClick = (e) => {
+			const path = e.composedPath ? e.composedPath() : [];
+			const anchor = path.find(el => el.tagName === 'A' && el.getAttribute('href')?.startsWith('#'));
+			if (anchor) {
+				const href = anchor.getAttribute('href');
+				if (href === '#') {
+					e.preventDefault();
+					lenis.scrollTo('top', { duration: 1.5 });
+				} else {
+					const targetElement = document.querySelector(href);
+					if (targetElement) {
+						e.preventDefault();
+						lenis.scrollTo(targetElement, { duration: 1.5 });
+					}
+				}
+			}
+		};
+
+		document.addEventListener('click', handleGlobalAnchorClick);
+
 		return () => {
+			document.removeEventListener('click', handleGlobalAnchorClick);
 			lenis.destroy();
 			gsap.ticker.remove(lenis.raf);
 		};
