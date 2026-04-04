@@ -61,7 +61,7 @@ const tiers = [
 
 export default function Sponsorship() {
 	return (
-		<section className="relative w-full h-auto min-h-screen lg:h-screen bg-[#050605] flex flex-col justify-center overflow-hidden z-0 py-12 lg:py-0 border-t border-white/10">
+		<section id="sponsorship" className="relative w-full h-auto min-h-screen lg:h-screen bg-[#050605] flex flex-col justify-center overflow-hidden z-0 py-12 lg:py-0 border-t border-white/10">
 			{/* Aggressive background elements */}
 			<div className="absolute inset-0 z-[-1] flex items-center justify-center opacity-[0.03] pointer-events-none overflow-hidden">
 				<h1 className="font-anton text-[25vw] italic whitespace-nowrap tracking-tighter text-white">
