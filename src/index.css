@@ -3,16 +3,71 @@
 @theme {
 	--color-oxford-navy: #154284;
 	--color-lavender-mist: #f5f2f7;
-	--color-onyx: #090b09;
+	--color-onyx: #050605; /* True Black/Onyx */
+	--color-crimson-red: #dc143c; /* Tertiary accent */
 
 	/* Register the fonts natively into Tailwind */
 	--font-anton: "Anton", sans-serif;
 	--font-inter: "Inter", sans-serif;
 }
 
+html.lenis, html.lenis body {
+  height: auto;
+  width: 100vw;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 body {
-	background-color: var(--color-oxford-navy);
+	background-color: var(--color-onyx); /* Shift base to Onyx for deeper contrast */
 	color: var(--color-lavender-mist);
-	/* Inter is now the default for all standard text and UI */
 	font-family: var(--font-inter);
+	overflow-x: hidden;
+	cursor: none; /* Hide default cursor for custom cursor */
+}
+
+/* Custom Cursor Styles */
+.custom-cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: var(--color-crimson-red);
+	pointer-events: none;
+	z-index: 9999;
+	mix-blend-mode: difference;
+}
+
+.custom-cursor-follower {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid var(--color-crimson-red);
+	pointer-events: none;
+	z-index: 9998;
+	opacity: 0.5;
+}
+
+/* Base link hover tweaks */
+a, button {
+	cursor: none; /* Let custom cursor handle indicating hover */
 }

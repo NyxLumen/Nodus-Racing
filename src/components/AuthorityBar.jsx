@@ -1,36 +1,54 @@
-// src/components/AuthorityBar.jsx
+import React, { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
 export default function AuthorityBar() {
+	const barRef = useRef();
+	
+	useGSAP(() => {
+		const elements = barRef.current.querySelectorAll('.auth-item');
+		
+		gsap.from(elements, {
+			scrollTrigger: {
+				trigger: barRef.current,
+				start: "top 90%",
+			},
+			y: 50,
+			opacity: 0,
+			stagger: 0.15,
+			duration: 1,
+			ease: "power3.out"
+		});
+	}, { scope: barRef });
+
 	return (
-		// Background changed to true black, border changed to a faint white line
-		<section className="w-full bg-[#090b09] py-10 px-12 border-t border-white/10">
+		<section ref={barRef} className="w-full bg-[#050605] py-10 px-12 border-t border-white/10 relative overflow-hidden">
+			{/* Crimson accent line at the top */}
+			<div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#dc143c] to-transparent opacity-50"></div>
+			
 			<div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 md:gap-4">
-				{/* 1. SRM Logo */}
-				<div className="flex items-center justify-center w-64">
+				<div className="auth-item flex items-center justify-center w-64 hover-target">
 					<img
 						src="/srm-logo.svg"
 						alt="SRM Institute of Science & Technology"
-						/* Stripped out the opacity. Pure, solid white inverted logo now. */
-						className="w-full grayscale invert"
+						className="w-full grayscale invert opacity-80 hover:opacity-100 transition-opacity duration-300"
 					/>
 				</div>
 
-				{/* 2. NAAC Accreditation */}
-				<div className="text-center flex flex-col items-center">
-					{/* Main text is solid Lavender Mist, subtext is dimmed to 60% opacity */}
-					<span className="text-5xl font-normal text-[#f5f2f7] tracking-wide">
+				<div className="auth-item text-center flex flex-col items-center">
+					<span className="text-5xl font-normal text-lavender-mist tracking-wide">
 						NAAC A++
 					</span>
-					<span className="text-base tracking-[0.15em] mt-1 text-[#f5f2f7]/60">
+					<span className="text-base tracking-[0.15em] mt-1 text-crimson-red">
 						ACCREDITED
 					</span>
 				</div>
 
-				{/* 3. UGC Status */}
-				<div className="text-center flex flex-col items-center">
-					<span className="text-5xl font-normal text-[#f5f2f7] tracking-wide">
+				<div className="auth-item text-center flex flex-col items-center">
+					<span className="text-5xl font-normal text-lavender-mist tracking-wide">
 						UGC CATEGORY-I
 					</span>
-					<span className="text-base tracking-[0.15em] mt-1 text-[#f5f2f7]/60">
+					<span className="text-base tracking-[0.15em] mt-1 text-crimson-red">
 						STATUS
 					</span>
 				</div>
