@@ -75,17 +75,16 @@ export default function Sponsorship() {
 			<div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 h-full flex flex-col justify-center py-12">
 				
 				{/* Header Section */}
-				<div className="flex flex-col md:flex-row md:items-end justify-between border-b-[3px] border-white/10 pb-6 mb-8">
+				<div className="flex flex-col md:flex-row md:items-end justify-between border-b-[2px] border-white/10 pb-6 mb-8">
 					<div className="uppercase">
-						<h3 className="font-inter font-bold text-[#cc203e] tracking-[0.3em] mb-2 text-sm">// JOIN THE GRID</h3>
-						<h2 className="font-anton text-5xl md:text-7xl lg:text-8xl text-white tracking-widest italic pr-4 leading-none">
+						<h3 className="font-inter font-bold text-white/50 tracking-[0.2em] mb-2 text-sm">// JOIN THE GRID</h3>
+						<h2 className="font-anton text-5xl md:text-7xl lg:text-8xl text-white tracking-widest pr-4 leading-none uppercase">
 							SPONSORSHIP
 						</h2>
 					</div>
 					<div className="mt-8 md:mt-0 group shrink-0 hidden md:block">
-						<button className="relative px-10 py-4 bg-[#cc203e] text-white font-anton text-2xl uppercase tracking-wider italic skew-x-[-15deg] hover:bg-white hover:text-[#cc203e] transition-colors duration-300 shadow-[0_0_20px_rgba(204,32,62,0.5)]">
-							<span className="block skew-x-[15deg]">Secure Position</span>
-							<div className="absolute inset-0 border-2 border-[#cc203e] translate-x-3 -translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 z-[-1]"></div>
+						<button className="px-8 py-3 bg-white text-[#0a1b3a] font-inter font-bold uppercase tracking-wider text-sm hover:bg-black hover:text-white border border-transparent hover:border-white transition-all duration-300">
+							Secure Position
 						</button>
 					</div>
 				</div>
@@ -101,16 +100,16 @@ export default function Sponsorship() {
 							<div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl ${tier.color} opacity-10 group-hover:opacity-30 transition-opacity blur-2xl rounded-full transform translate-x-8 -translate-y-8`}></div>
 							
 							<div className="relative z-10 flex flex-col h-full">
-								<div className="flex justify-between items-start mb-1">
-									<h4 className={`font-anton text-xl italic tracking-wider ${tier.textColor}`}>
+								<div className="flex justify-between items-start mb-2">
+									<h4 className={`font-inter font-bold text-xl tracking-wider uppercase ${tier.textColor}`}>
 										{tier.name}
 									</h4>
-									<span className={`font-anton text-base ${tier.textColor} opacity-30`}>
+									<span className={`font-inter font-bold text-sm ${tier.textColor} opacity-40`}>
 										0{index + 1}
 									</span>
 								</div>
 								
-								<div className="font-anton text-4xl lg:text-5xl text-white tracking-wider mb-4">
+								<div className="font-inter font-black text-3xl lg:text-4xl text-white tracking-tight mb-4">
 									{tier.price}
 								</div>
 								
@@ -128,7 +127,7 @@ export default function Sponsorship() {
 									<ul className="space-y-3">
 										{tier.features.map((f, i) => (
 											<li key={i} className="flex items-start gap-3">
-												<span className={`font-anton text-sm ${tier.textColor} mt-0.5`}>&gt;&gt;</span>
+												<span className={`font-inter font-bold text-sm ${tier.textColor} mt-[2px]`}>•</span>
 												<span className="font-inter text-xs md:text-xs text-[#f5f2f7]/70 uppercase tracking-widest leading-snug">
 													{f}
 												</span>
@@ -143,8 +142,8 @@ export default function Sponsorship() {
 
 				{/* Mobile Only Button */}
 				<div className="mt-12 group shrink-0 md:hidden flex justify-center">
-					<button className="relative px-10 py-4 bg-[#cc203e] text-white font-anton text-2xl uppercase tracking-wider italic skew-x-[-15deg] hover:bg-white hover:text-[#cc203e] transition-colors duration-300 w-full shadow-[0_0_20px_rgba(204,32,62,0.5)]">
-						<span className="block skew-x-[15deg]">Secure Position</span>
+					<button className="px-8 py-3 bg-white text-[#0a1b3a] font-inter font-bold uppercase tracking-wider text-sm hover:bg-black hover:text-white border border-transparent hover:border-white transition-all duration-300 w-full">
+						Secure Position
 					</button>
 				</div>
 			</div>

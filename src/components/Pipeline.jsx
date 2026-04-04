@@ -2,53 +2,46 @@ import React from 'react';
 
 export default function Pipeline() {
 	return (
-		<section className="relative w-full min-h-screen md:h-screen overflow-hidden">
-			{/* Edge-to-Edge Background Split */}
-			<div className="absolute inset-0 flex flex-col md:flex-row z-0">
-				{/* Dark Left Background */}
-				<div className="w-full h-1/2 md:h-full md:w-1/2 bg-[#090b09]"></div>
-				{/* Light Right Background with Image Placeholder */}
-				<div className="w-full h-1/2 md:h-full md:w-1/2 bg-white relative">
-					{/* Placeholder for the user to add an image later */}
-					<div className="absolute inset-0 w-full h-full bg-gray-100 mix-blend-multiply"></div>
+		<section className="relative w-full h-auto min-h-screen md:h-screen flex flex-col md:flex-row overflow-hidden border-t border-white/10">
+			{/* Left Side: Solid Dark Background */}
+			<div className="w-full md:w-1/2 min-h-[50vh] md:h-full bg-[#050605] flex flex-col px-8 md:px-16 pt-16 md:pt-24 pb-12 justify-between">
+				<div className="flex flex-col w-full text-right">
+					<h2 className="font-anton text-[12vw] md:text-[6vw] lg:text-[7rem] uppercase leading-[0.9] tracking-wider text-white m-0">
+						Not Just<br />A Logo
+					</h2>
+				</div>
+				
+				<div className="mt-16 md:mt-auto border-l-2 border-white/20 pl-6 md:pl-8 max-w-md ml-auto text-left">
+					<span className="font-inter font-semibold text-white/50 tracking-widest uppercase text-xs md:text-sm block mb-4">
+						Strategic Acquisition
+					</span>
+					<p className="font-inter text-lg md:text-xl text-white/90 leading-relaxed font-light">
+						Your sticker on our chassis is just the surface. Sponsoring
+						Nodus Racing is a true acquisition of talent. You gain a
+						first-look, direct pipeline to SRM IST’s elite engineering and
+						management minds before they hit the open market.
+					</p>
 				</div>
 			</div>
 
-			{/* Perfectly Aligned Content Container */}
-			<div className="relative z-10 w-full h-full max-w-7xl mx-auto px-8 md:px-12 flex flex-col md:flex-row pointer-events-none">
+			{/* Right Side: Clean Light Background & Fully Visible Image */}
+			<div className="w-full md:w-1/2 h-[50vh] md:h-full bg-[#f5f2f7] flex flex-col pt-16 md:pt-24 pb-8 md:pb-12 px-4 md:px-12">
+				<div className="px-4 md:px-0 flex flex-col mb-8 text-left">
+					<h2 className="font-anton text-[12vw] md:text-[6vw] lg:text-[7rem] uppercase text-[#050605] leading-[0.9] tracking-wider m-0">
+						A<br />Pipeline
+					</h2>
+				</div>
 				
-				{/* Left Content (Dark Side) */}
-				<div className="w-full md:w-1/2 flex flex-col pt-8 md:pt-16 pb-12 md:pb-20 pr-2 md:pr-4 h-1/2 md:h-full pointer-events-auto text-white">
-					{/* Heading positioned near the top */}
-					<div className="w-full flex justify-end">
-						<h2 className="font-anton text-[12vw] md:text-[6vw] uppercase leading-[1.0] tracking-wider text-right m-0">
-							Not Just<br />A Logo
-						</h2>
-					</div>
-					
-					{/* Paragraph beautifully restyled and vertically centered */}
-					<div className="my-auto border-l-[3px] border-white/20 pl-6 md:pl-8 py-2 max-w-lg">
-						<span className="font-inter font-bold text-white/50 tracking-widest uppercase text-sm md:text-base block mb-6">
-							// Strategic Acquisition
-						</span>
-						<p className="font-inter text-xl md:text-2xl text-white/90 leading-relaxed font-light">
-							Your sticker on our chassis is just the surface. Sponsoring
-							Nodus Racing is a true acquisition of talent. You gain a
-							first-look, direct pipeline to SRM IST’s elite engineering and
-							management minds before they hit the open market.
-						</p>
+				{/* Clean un-obscured image frame */}
+				<div className="flex-1 w-full h-full relative flex flex-col">
+					<div className="w-full h-full min-h-[300px] rounded-xl overflow-hidden bg-black/5 shadow-xl relative mt-auto">
+						<img 
+							src="/pictures/pipeline.jpg" 
+							alt="Nodus Racing Talent Pipeline" 
+							className="absolute inset-0 w-full h-full object-cover object-center" 
+						/>
 					</div>
 				</div>
-
-				{/* Right Content (Light Side) */}
-				<div className="w-full md:w-1/2 flex flex-col pt-8 md:pt-16 pb-12 md:pb-20 pl-2 md:pl-4 h-1/2 md:h-full pointer-events-auto">
-					<div className="w-full flex justify-start">
-						<h2 className="font-anton text-[12vw] md:text-[6vw] uppercase text-black leading-[1.0] tracking-wider text-left m-0">
-							A<br />Pipeline
-						</h2>
-					</div>
-				</div>
-
 			</div>
 		</section>
 	);
