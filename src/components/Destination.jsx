@@ -6,7 +6,6 @@ import { OrbitControls, useGLTF, Center, Environment, Html } from "@react-three/
 import { Suspense } from "react";
 
 function TrackModel() {
-	// Scaled up slightly since it's full screen now
 	const { scene } = useGLTF("/track.glb");
 	return <primitive object={scene} scale={1} rotation={[-Math.PI / 2, 0, 0]} />;
 }
@@ -65,7 +64,7 @@ export default function Destination() {
 			<div className="absolute bottom-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#0a1b3a] to-transparent opacity-30 transform rotate-6 z-0"></div>
 
 			{/* 3D CANVAS FULL SCREEN (z-10) */}
-			<div className="absolute inset-0 z-10 hover-target cursor-grab active:cursor-grabbing">
+			<div className="absolute inset-0 z-10 pointer-events-none">
 				<Canvas camera={{ position: [0, 100, 180], fov: 45 }}>
 					<ambientLight intensity={1.5} />
 					<directionalLight position={[10, 20, 10]} intensity={3} color="#ffffff" />
@@ -84,6 +83,7 @@ export default function Destination() {
 						autoRotateSpeed={0.6}
 						enablePan={false}
 						enableZoom={false}
+						enableRotate={false}
 						maxPolarAngle={Math.PI / 2.2}
 					/>
 				</Canvas>
