@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import AuthorityBar from "./components/AuthorityBar";
 import Legacy from "./components/Legacy";
 import Destination from "./components/Destination";
+import Pipeline from "./components/Pipeline";
 
 export default function App() {
 	return (
@@ -16,6 +17,7 @@ export default function App() {
 			<AuthorityBar />
 			<Legacy />
 			<Destination />
+			<Pipeline />
 		</main>
 	);
 }
