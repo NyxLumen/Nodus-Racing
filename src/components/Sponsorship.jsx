@@ -134,7 +134,7 @@ export default function Sponsorship() {
 									{tier.price}
 								</div>
 								
-								<div className="relative w-[calc(100%+32px)] -mx-4 flex items-center justify-center my-6 h-[100px] md:h-[120px]">
+								<div className="relative w-[calc(100%+48px)] -mx-6 flex items-center justify-center my-8 h-[160px] md:h-[200px]">
 									<img 
 										src={tier.image} 
 										alt={tier.name} 
@@ -147,7 +147,7 @@ export default function Sponsorship() {
 									<ul className="space-y-3">
 										{tier.features.map((f, i) => (
 											<li key={i} className="flex items-start gap-3">
-												<span className={`font-inter font-bold text-sm ${tier.textColor} mt-[2px]`}>•</span>
+												<span className={`w-[4px] h-[4px] mt-[6px] shrink-0 bg-current rounded-full ${tier.textColor}`}></span>
 												<span className="font-inter text-xs md:text-xs text-[#f5f2f7]/70 uppercase tracking-widest leading-snug">
 													{f}
 												</span>
