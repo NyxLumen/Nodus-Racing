@@ -26,13 +26,11 @@ export default function Footer() {
 			<div className="absolute bottom-0 right-[25%] w-[1px] h-full bg-gradient-to-t from-white/10 to-transparent skew-x-[-25deg] z-0 transition-colors duration-700 group-hover/footer:from-[#0a1b3a]/50"></div>
 			
 			<div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col">
-				<div className="flex flex-col lg:flex-row justify-between items-start mb-24">
+				<div className="flex flex-col lg:flex-row justify-between items-start mb-24 gap-16 lg:gap-8">
 					
-					<div className="flex flex-col mb-16 lg:mb-0">
-						<div className="flex items-center gap-4 mb-4">
-							<span className="w-12 h-[1px] bg-[#406eb5]"></span>
-							<span className="font-inter font-bold text-[#406eb5] tracking-[0.3em] uppercase text-sm">Join the Grid</span>
-						</div>
+					{/* LEFT SIDE: Title + Primary Email + Staff Contacts */}
+					<div className="flex flex-col mb-8 lg:mb-0 max-w-2xl">
+
 						<div className="overflow-visible">
 							<h2 className="footer-title font-anton text-7xl md:text-[8rem] leading-[0.85] text-white tracking-widest uppercase origin-top-left">
 								Let's Build<br />
@@ -40,15 +38,37 @@ export default function Footer() {
 							</h2>
 						</div>
 						<a 
-							href="mailto:partnerships@nodusracing.com" 
-							className="hover-target mt-10 font-inter text-xl md:text-2xl text-[#f5f2f7]/50 hover:text-white flex items-center gap-4 transition-colors duration-300 w-fit group"
+							href="mailto:NODUSRACING@GMAIL.COM" 
+							className="hover-target mt-10 font-inter text-xl md:text-2xl text-lavender-mist/50 hover:text-white flex items-center gap-4 transition-colors duration-300 w-fit group"
 						>
 							<span className="font-inter font-bold text-[#406eb5] group-hover:translate-x-3 transition-transform duration-300">-</span>
-							partnerships@nodusracing.com
+							NODUSRACING@GMAIL.COM
 						</a>
+
+						{/* Moved CONTACTS to left side directly beneath email */}
+						<div className="flex flex-col sm:flex-row gap-12 sm:gap-24 mt-16 pt-12 border-t border-white/10 w-fit">
+							<div className="footer-link flex flex-col">
+								<span className="font-inter font-bold text-white tracking-widest text-xs lg:text-sm uppercase mb-2">Dr. Gyander Ghangas</span>
+								<span className="font-inter text-lavender-mist/50 text-xs lg:text-sm tracking-wider mb-1">+91 94162 47553</span>
+								<a href="mailto:gyanderg@srmist.edu.in" className="hover-target relative font-inter text-lavender-mist/50 hover:text-white text-xs lg:text-sm tracking-wider transition-all duration-300 group inline-flex items-center w-fit">
+									gyanderg@srmist.edu.in
+									<span className="absolute -bottom-1 left-0 w-0 h-px bg-[#406eb5] group-hover:w-full transition-all duration-300"></span>
+								</a>
+							</div>
+							
+							<div className="footer-link flex flex-col">
+								<span className="font-inter font-bold text-white tracking-widest text-xs lg:text-sm uppercase mb-2">Saurabh Kumar</span>
+								<span className="font-inter text-lavender-mist/50 text-xs lg:text-sm tracking-wider mb-1">+91 78360 48208</span>
+								<a href="mailto:nodusracing@gmail.com" className="hover-target relative font-inter text-lavender-mist/50 hover:text-white text-xs lg:text-sm tracking-wider transition-all duration-300 group inline-flex items-center w-fit">
+									nodusracing@gmail.com
+									<span className="absolute -bottom-1 left-0 w-0 h-px bg-[#406eb5] group-hover:w-full transition-all duration-300"></span>
+								</a>
+							</div>
+						</div>
 					</div>
 
-					<div className="flex gap-16 md:gap-32 lg:pt-16">
+					{/* RIGHT SIDE: Quick Links + Socials */}
+					<div className="flex gap-16 md:gap-32 lg:pt-16 shrink-0">
 						<div className="flex flex-col">
 							<h4 className="font-inter font-bold text-sm text-white/50 tracking-[0.2em] mb-8 uppercase">QUICK LINKS</h4>
 							<ul className="space-y-6">
@@ -59,7 +79,7 @@ export default function Footer() {
 									{ name: 'Sponsorship', path: '#sponsorship' }
 								].map((link) => (
 									<li key={link.name} className="footer-link">
-										<a href={link.path} className="hover-target relative font-inter text-[#f5f2f7]/50 hover:text-white uppercase tracking-widest text-sm transition-all duration-300 hover:translate-x-4 flex items-center group">
+										<a href={link.path} className="hover-target relative font-inter text-lavender-mist/50 hover:text-white uppercase tracking-widest text-sm transition-all duration-300 hover:translate-x-4 flex items-center group">
 											<span className="absolute -left-5 text-[#406eb5] opacity-0 group-hover:opacity-100 transition-all duration-300 font-bold scale-50 group-hover:scale-100">/</span>
 											{link.name}
 										</a>
@@ -72,9 +92,9 @@ export default function Footer() {
 							<h4 className="font-inter font-bold text-sm text-white/50 tracking-[0.2em] mb-8 uppercase">SOCIALS</h4>
 							<ul className="space-y-6">
 								<li className="footer-link">
-									<a href="#" className="hover-target relative font-inter text-[#f5f2f7]/50 hover:text-white uppercase tracking-widest text-sm transition-all duration-300 hover:translate-x-4 flex items-center group">
+									<a href="https://instagram.com/NODUSRACING" target="_blank" rel="noopener noreferrer" className="hover-target relative font-inter text-lavender-mist/50 hover:text-white uppercase tracking-widest text-sm transition-all duration-300 hover:translate-x-4 flex items-center group">
 										<span className="absolute -left-5 text-[#406eb5] opacity-0 group-hover:opacity-100 transition-all duration-300 font-bold scale-50 group-hover:scale-100">/</span>
-										Instagram
+										@NODUSRACING
 									</a>
 								</li>
 							</ul>
@@ -86,9 +106,11 @@ export default function Footer() {
 					<p className="font-inter text-[#f5f2f7]/40 text-sm tracking-widest uppercase">
 						© 2026 Nodus Racing. Engineered in India.
 					</p>
-					<div className="font-anton text-white/10 text-4xl tracking-widest italic select-none">
-						NODUS
-					</div>
+					<img 
+						src="/logo.svg" 
+						alt="Nodus Racing Logo" 
+						className="h-8 md:h-10 opacity-20 select-none object-contain"
+					/>
 				</div>
 			</div>
 		</footer>
