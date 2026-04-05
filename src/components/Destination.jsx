@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Canvas } from "@react-three/fiber";
@@ -22,6 +22,16 @@ function Loader() {
 
 export default function Destination() {
 	const destRef = useRef();
+	const [isVisible, setIsVisible] = useState(false);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => setIsVisible(entry.isIntersecting),
+			{ rootMargin: "200px" } // preload before perfectly coming into view
+		);
+		if (destRef.current) observer.observe(destRef.current);
+		return () => observer.disconnect();
+	}, []);
 
 	useGSAP(() => {
 		const tl = gsap.timeline({
@@ -65,7 +75,12 @@ export default function Destination() {
 
 			{/* 3D CANVAS FULL SCREEN (z-10) */}
 			<div className="absolute inset-0 z-10 pointer-events-none">
-				<Canvas camera={{ position: [0, 100, 180], fov: 45 }}>
+				<Canvas 
+					frameloop="demand"
+					camera={{ position: [0, 100, 180], fov: 45 }}
+					dpr={[1, 1.5]}
+					gl={{ antialias: true, powerPreference: "high-performance" }}
+				>
 					<ambientLight intensity={1.5} />
 					<directionalLight position={[10, 20, 10]} intensity={3} color="#ffffff" />
 					<directionalLight position={[-10, 5, -10]} intensity={2} color="#406eb5" />
@@ -79,18 +94,18 @@ export default function Destination() {
 					</Suspense>
 
 					<OrbitControls
-						autoRotate
+						autoRotate={isVisible}
 						autoRotateSpeed={0.6}
 						enablePan={false}
 						enableZoom={false}
-						enableRotate={false}
+						enableRotate={true}
 						maxPolarAngle={Math.PI / 2.2}
 					/>
 				</Canvas>
 			</div>
 
 			{/* HUD / EDITORIAL FOREGROUND TYPOGRAPHY (z-20) */}
-			<div className="absolute inset-0 pointer-events-none z-20 flex flex-col justify-between p-8 md:p-16 lg:p-24 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+			<div className="absolute inset-0 pointer-events-none z-20 flex flex-col justify-between p-8 md:p-16 lg:p-24">
 				
 				{/* Top Left HUD */}
 				<div className="hud-text-top max-w-2xl mt-12 md:mt-16">

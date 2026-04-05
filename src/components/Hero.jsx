@@ -23,7 +23,14 @@ export default function Hero() {
 			"-=1"
 		);
 
-		// Mouse parallax simply tracking inside the container
+		// Mouse parallax tracking using quickTo for memory optimization
+		const textXTo = gsap.quickTo([titleRef1.current, titleRef2.current], "x", { duration: 1, ease: 'power2.out' });
+		const textYTo = gsap.quickTo([titleRef1.current, titleRef2.current], "y", { duration: 1, ease: 'power2.out' });
+		const carXTo = gsap.quickTo(carRef.current, "x", { duration: 1, ease: 'power2.out' });
+		const carYTo = gsap.quickTo(carRef.current, "y", { duration: 1, ease: 'power2.out' });
+		const carRotXTo = gsap.quickTo(carRef.current, "rotationX", { duration: 1, ease: 'power2.out' });
+		const carRotYTo = gsap.quickTo(carRef.current, "rotationY", { duration: 1, ease: 'power2.out' });
+
 		const handleMouseMove = (e) => {
 			const { clientX, clientY } = e;
 			const { innerWidth, innerHeight } = window;
@@ -31,22 +38,13 @@ export default function Hero() {
 			const xPos = (clientX / innerWidth - 0.5) * 30; // 30px movement bounds
 			const yPos = (clientY / innerHeight - 0.5) * 30;
 
-			// Move text opposite to car roughly
-			gsap.to([titleRef1.current, titleRef2.current], {
-				x: -xPos * 0.5,
-				y: -yPos * 0.5,
-				duration: 1,
-				ease: 'power2.out'
-			});
-
-			gsap.to(carRef.current, {
-				x: xPos,
-				y: yPos,
-				rotationY: xPos * 0.1,
-				rotationX: -yPos * 0.1,
-				duration: 1,
-				ease: 'power2.out'
-			});
+			// Apply quick properties
+			textXTo(-xPos * 0.5);
+			textYTo(-yPos * 0.5);
+			carXTo(xPos);
+			carYTo(yPos);
+			carRotYTo(xPos * 0.1);
+			carRotXTo(-yPos * 0.1);
 		};
 
 		window.addEventListener('mousemove', handleMouseMove);

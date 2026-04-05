@@ -38,7 +38,7 @@ export default function Pipeline() {
 		<section ref={containerRef} id="pipeline" className="relative w-full h-screen lg:h-[120vh] bg-onyx overflow-hidden flex items-center justify-center border-t border-white/10" style={{ perspective: "1500px" }}>
 			
 			{/* Background Image Layer (revealed when panels split) */}
-			<div className="absolute inset-0 z-0 flex items-center justify-center bg-[#0a1b3a]">
+			<div className="absolute inset-0 z-0 flex items-center justify-center bg-[#0a1b3a] isolate">
 				<img 
 					src="/pictures/pipeline.jpg" 
 					alt="Nodus Racing Talent Pipeline" 
