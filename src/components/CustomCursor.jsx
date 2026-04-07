@@ -1,12 +1,18 @@
 // src/components/CustomCursor.jsx
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 export default function CustomCursor() {
 	const cursorRef = useRef(null);
 	const followerRef = useRef(null);
+	const [isTouch, setIsTouch] = useState(false);
 
 	useEffect(() => {
+		// Detect touch/coarse pointer devices and bail out
+		const touchDevice = window.matchMedia('(pointer: coarse)').matches;
+		setIsTouch(touchDevice);
+		if (touchDevice) return;
+
 		const cursor = cursorRef.current;
 		const follower = followerRef.current;
 
@@ -84,6 +90,9 @@ export default function CustomCursor() {
 			document.removeEventListener("mouseover", handleMouseOver);
 		};
 	}, []);
+
+	// Don't render anything on touch devices
+	if (isTouch) return null;
 
 	return (
 		<>

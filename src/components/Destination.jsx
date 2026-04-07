@@ -13,7 +13,7 @@ function TrackModel() {
 function Loader() {
 	return (
 		<Html center>
-			<div className="text-[#f5f2f7] font-inter font-bold tracking-widest uppercase">
+			<div className="text-[#f5f2f7] font-inter font-bold tracking-widest uppercase text-sm">
 				Loading Telemetry...
 			</div>
 		</Html>
@@ -23,14 +23,22 @@ function Loader() {
 export default function Destination() {
 	const destRef = useRef();
 	const [isVisible, setIsVisible] = useState(false);
+	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
+		const checkMobile = () => setIsMobile(window.innerWidth < 768);
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+
 		const observer = new IntersectionObserver(
 			([entry]) => setIsVisible(entry.isIntersecting),
 			{ rootMargin: "200px" } // preload before perfectly coming into view
 		);
 		if (destRef.current) observer.observe(destRef.current);
-		return () => observer.disconnect();
+		return () => {
+			observer.disconnect();
+			window.removeEventListener('resize', checkMobile);
+		};
 	}, []);
 
 	useGSAP(() => {
@@ -60,11 +68,11 @@ export default function Destination() {
 		<section
 			ref={destRef}
 			id="destination"
-			className="w-full bg-[#050605] h-[120vh] relative overflow-hidden border-t border-white/10"
+			className="w-full bg-[#050605] h-screen lg:h-[120vh] relative overflow-hidden border-t border-white/10"
 		>
 			{/* MASSIVE BACKGROUND TYPOGRAPHY (z-0) */}
 			<div className="bg-hud-text absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.04]">
-				<h1 className="font-anton text-[25vw] leading-none text-white tracking-widest uppercase rotate-[-5deg]">
+				<h1 className="font-anton text-[30vw] md:text-[25vw] leading-none text-white tracking-widest uppercase rotate-[-5deg]">
 					BUDDH
 				</h1>
 			</div>
@@ -77,8 +85,8 @@ export default function Destination() {
 			<div className="absolute inset-0 z-10 pointer-events-none">
 				<Canvas 
 					frameloop="demand"
-					camera={{ position: [0, 100, 180], fov: 45 }}
-					dpr={[1, 1.5]}
+					camera={{ position: [0, 100, isMobile ? 380 : 180], fov: 45 }}
+					dpr={isMobile ? [1, 1] : [1, 1.5]}
 					gl={{ antialias: true, powerPreference: "high-performance" }}
 				>
 					<ambientLight intensity={1.5} />
@@ -105,30 +113,30 @@ export default function Destination() {
 			</div>
 
 			{/* HUD / EDITORIAL FOREGROUND TYPOGRAPHY (z-20) */}
-			<div className="absolute inset-0 pointer-events-none z-20 flex flex-col justify-between p-8 md:p-16 lg:p-24">
+			<div className="absolute inset-0 pointer-events-none z-20 flex flex-col justify-between p-5 md:p-10 lg:p-16 xl:p-24">
 				
 				{/* Top Left HUD */}
-				<div className="hud-text-top max-w-2xl mt-12 md:mt-16">
+				<div className="hud-text-top max-w-2xl mt-8 md:mt-12 lg:mt-16">
 					<div className="dest-reveal">
-						<h4 className="font-inter font-bold text-sm md:text-lg text-[#406eb5] tracking-[0.2em] uppercase flex items-center gap-4 mb-4">
-							<span className="w-12 h-[2px] bg-[#406eb5] inline-block drop-shadow-[0_0_10px_rgba(64,110,181,0.8)]"></span> Destination
+						<h4 className="font-inter font-bold text-xs md:text-sm lg:text-lg text-[#406eb5] tracking-[0.2em] uppercase flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+							<span className="w-8 md:w-12 h-[2px] bg-[#406eb5] inline-block drop-shadow-[0_0_10px_rgba(64,110,181,0.8)]"></span> Destination
 						</h4>
-						<h2 className="font-anton font-black text-5xl md:text-7xl lg:text-[7rem] text-white tracking-tight uppercase leading-[0.9] drop-shadow-2xl">
+						<h2 className="font-anton font-black text-[10vw] md:text-[7vw] lg:text-7xl xl:text-[7rem] text-white tracking-tight uppercase leading-[0.9] drop-shadow-2xl">
 							Buddh International<br/>Circuit 2026
 						</h2>
 					</div>
 				</div>
 
 				{/* Bottom Right HUD */}
-				<div className="hud-text-bottom self-end max-w-lg mb-12 md:mb-16">
+				<div className="hud-text-bottom self-end max-w-sm md:max-w-lg mb-8 md:mb-12 lg:mb-16">
 					<div className="dest-reveal">
-						<h3 className="font-inter font-bold text-2xl md:text-4xl text-white tracking-wide uppercase mb-6 drop-shadow-xl text-right">
+						<h3 className="font-inter font-bold text-xl md:text-2xl lg:text-4xl text-white tracking-wide uppercase mb-4 md:mb-6 drop-shadow-xl text-right">
 							The Ultimate<br/>Proving Ground
 						</h3>
-						<div className="w-full h-[1px] bg-white/20 mb-6 relative">
+						<div className="w-full h-[1px] bg-white/20 mb-4 md:mb-6 relative">
 							<div className="absolute top-0 right-0 w-1/3 h-full bg-[#406eb5]"></div>
 						</div>
-						<p className="font-inter text-base md:text-lg text-[#f5f2f7]/90 leading-relaxed font-light text-right drop-shadow-md">
+						<p className="font-inter text-sm md:text-base lg:text-lg text-[#f5f2f7]/90 leading-relaxed font-light text-right drop-shadow-md">
 							The Indian Karting Race isn't just a championship; it is a <span className="text-[#406eb5] font-bold">crucible</span>. 
 							We are engineering a high-performance machine designed to shatter collegiate benchmarks on India's premier F1 track. Raw speed, refined by precision.
 						</p>

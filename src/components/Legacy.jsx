@@ -47,20 +47,20 @@ export default function Legacy() {
 	}, { scope: legacyRef });
 
 	return (
-		<section ref={legacyRef} id="legacy" className="w-full bg-lavender-mist py-32 px-8 md:px-12 text-[#050605] relative z-20">
-			<div className="max-w-7xl mx-auto flex flex-col gap-32">
+		<section ref={legacyRef} id="legacy" className="w-full bg-lavender-mist py-16 md:py-32 px-6 md:px-12 text-[#050605] relative z-20">
+			<div className="max-w-7xl mx-auto flex flex-col gap-16 md:gap-32">
 				<div className="overflow-hidden">
-					<h2 className="header-reveal font-anton text-6xl md:text-[8vw] tracking-wider uppercase m-0 leading-none">
+					<h2 className="header-reveal font-anton text-[12vw] md:text-[10vw] lg:text-[8vw] tracking-wider uppercase m-0 leading-none">
 						The DNA of Speed
 					</h2>
 				</div>
 
-				<div className="legacy-block flex flex-col md:flex-row items-center gap-10 md:gap-16">
-					<div className="flex-1 space-y-6">
-						<h3 className="reveal-text font-inter font-bold text-3xl md:text-5xl tracking-tight uppercase flex items-center gap-4">
+				<div className="legacy-block flex flex-col md:flex-row items-center gap-8 md:gap-16">
+					<div className="flex-1 space-y-4 md:space-y-6">
+						<h3 className="reveal-text font-inter font-bold text-2xl md:text-3xl lg:text-5xl tracking-tight uppercase flex items-center gap-3 md:gap-4">
 							Aerox <span className="text-[#406eb5]">//</span> Raw Dynamics
 						</h3>
-						<p className="reveal-text font-inter text-lg md:text-xl leading-relaxed text-[#050605]/80 max-w-xl">
+						<p className="reveal-text font-inter text-base md:text-lg lg:text-xl leading-relaxed text-[#050605]/80 max-w-xl">
 							Forged in the rigorous environment of Formula Student, the AeroX
 							architecture established our baseline for aggressive aerodynamics,
 							high-G cornering stability, and unapologetic power delivery. It
@@ -75,14 +75,14 @@ export default function Legacy() {
 					</div>
 				</div>
 
-				<div className="legacy-block flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16">
-					<div className="flex-1 space-y-6">
-						<h3 className="reveal-text font-inter font-bold text-3xl md:text-5xl tracking-tight uppercase">
+				<div className="legacy-block flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16">
+					<div className="flex-1 space-y-4 md:space-y-6">
+						<h3 className="reveal-text font-inter font-bold text-2xl md:text-3xl lg:text-5xl tracking-tight uppercase">
 							Hypergreen <span className="text-[#406eb5]">//</span>
 							<br />
 							Ruthless Efficiency
 						</h3>
-						<p className="reveal-text font-inter text-lg md:text-xl leading-relaxed text-[#050605]/80 max-w-xl">
+						<p className="reveal-text font-inter text-base md:text-lg lg:text-xl leading-relaxed text-[#050605]/80 max-w-xl">
 							Speed without intelligence is waste. Competing in the Shell
 							Eco-Marathon engineered a team obsessed with hyper-lightweight
 							fabrication, extreme energy conservation, and frictionless

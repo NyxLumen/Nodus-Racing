@@ -94,13 +94,13 @@ export default function Sponsorship() {
 				</h1>
 			</div>
 
-			<div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 h-full flex flex-col justify-center py-12">
+			<div className="relative z-10 w-full max-w-7xl mx-auto px-5 md:px-12 h-full flex flex-col justify-center py-8 md:py-12">
 				
 				{/* Header Section */}
-				<div className="sponsor-header flex flex-col md:flex-row md:items-end justify-between border-b-[2px] border-white/10 pb-6 mb-8">
+				<div className="sponsor-header flex flex-col md:flex-row md:items-end justify-between border-b-[2px] border-white/10 pb-4 md:pb-6 mb-6 md:mb-8">
 					<div className="uppercase">
-						<h3 className="font-inter font-bold text-[#406eb5] tracking-[0.2em] mb-2 text-sm">// JOIN THE GRID</h3>
-						<h2 className="font-anton text-5xl md:text-7xl lg:text-8xl text-white tracking-widest pr-4 leading-none uppercase">
+						<h3 className="font-inter font-bold text-[#406eb5] tracking-[0.2em] mb-2 text-xs md:text-sm">// JOIN THE GRID</h3>
+						<h2 className="font-anton text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white tracking-widest pr-4 leading-none uppercase">
 							SPONSORSHIP
 						</h2>
 					</div>
@@ -112,17 +112,17 @@ export default function Sponsorship() {
 				</div>
 
 				{/* Cards Grid */}
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 items-stretch">
 					{tiers.map((tier, index) => (
 						<div 
 							key={index} 
-							className={`sponsor-card group relative bg-[#050605] backdrop-blur-sm border-t-4 border-l border-r border-b ${tier.borderColor} border-l-white/5 border-r-white/5 border-b-white/5 flex flex-col p-5 transition-all duration-500 hover:-translate-y-4 hover-target ${tier.glow}`}
+							className={`sponsor-card group relative bg-[#050605] backdrop-blur-sm border-t-4 border-l border-r border-b ${tier.borderColor} border-l-white/5 border-r-white/5 border-b-white/5 flex flex-col p-4 md:p-5 transition-all duration-500 hover:-translate-y-4 hover-target ${tier.glow}`}
 						>
 							<div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl ${tier.color} opacity-10 group-hover:opacity-30 transition-opacity blur-2xl rounded-full transform translate-x-8 -translate-y-8`}></div>
 							
 							<div className="relative z-10 flex flex-col h-full">
 								<div className="flex justify-between items-start mb-2">
-									<h4 className={`font-inter font-bold text-xl tracking-wider uppercase ${tier.textColor}`}>
+									<h4 className={`font-inter font-bold text-lg md:text-xl tracking-wider uppercase ${tier.textColor}`}>
 										{tier.name}
 									</h4>
 									<span className={`font-inter font-bold text-sm ${tier.textColor} opacity-40`}>
@@ -130,11 +130,11 @@ export default function Sponsorship() {
 									</span>
 								</div>
 								
-								<div className="font-inter font-black text-3xl lg:text-4xl text-white tracking-tight mb-4 group-hover:scale-105 transform origin-left transition-transform duration-300">
+								<div className="font-inter font-black text-2xl md:text-3xl lg:text-4xl text-white tracking-tight mb-3 md:mb-4 group-hover:scale-105 transform origin-left transition-transform duration-300">
 									{tier.price}
 								</div>
 								
-								<div className="relative w-[calc(100%+48px)] -mx-6 flex items-center justify-center my-8 h-[160px] md:h-[200px]">
+								<div className="relative w-[calc(100%+32px)] md:w-[calc(100%+48px)] -mx-4 md:-mx-6 flex items-center justify-center my-4 md:my-8 h-[180px] md:h-[180px] lg:h-[200px]">
 									<img 
 										src={tier.image} 
 										alt={tier.name} 
@@ -142,13 +142,13 @@ export default function Sponsorship() {
 									/>
 								</div>
 
-								<div className="mt-6 border-t border-white/10 pt-4 relative">
+								<div className="mt-4 md:mt-6 border-t border-white/10 pt-3 md:pt-4 relative">
 									<div className="absolute top-0 left-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-full"></div>
-									<ul className="space-y-3">
+									<ul className="space-y-2 md:space-y-3">
 										{tier.features.map((f, i) => (
-											<li key={i} className="flex items-start gap-3">
-												<span className={`w-[4px] h-[4px] mt-[6px] shrink-0 bg-current rounded-full ${tier.textColor}`}></span>
-												<span className="font-inter text-xs md:text-xs text-[#f5f2f7]/70 uppercase tracking-widest leading-snug">
+											<li key={i} className="flex items-start gap-2 md:gap-3">
+												<span className={`w-[4px] h-[4px] mt-[5px] md:mt-[6px] shrink-0 bg-current rounded-full ${tier.textColor}`}></span>
+												<span className="font-inter text-[11px] md:text-xs text-[#f5f2f7]/70 uppercase tracking-widest leading-snug">
 													{f}
 												</span>
 											</li>
@@ -161,7 +161,7 @@ export default function Sponsorship() {
 				</div>
 
 				{/* Mobile Only Button */}
-				<div className="mt-12 group shrink-0 md:hidden flex justify-center">
+				<div className="mt-8 md:mt-12 group shrink-0 md:hidden flex justify-center">
 					<button className="hover-target px-8 py-3 bg-white text-[#0a1b3a] font-inter font-bold uppercase tracking-wider text-sm hover:bg-[#dc143c] hover:text-white transition-all duration-300 w-full transform active:scale-95">
 						Secure Position
 					</button>

@@ -35,4 +35,5 @@ body {
 	background-color: var(--color-onyx); /* Shift base to Onyx for deeper contrast */
 	color: var(--color-lavender-mist);
 	font-family: var(--font-inter);
+	overflow-x: hidden;
 }

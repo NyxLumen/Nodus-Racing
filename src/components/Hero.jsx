@@ -23,7 +23,10 @@ export default function Hero() {
 			"-=1"
 		);
 
-		// Mouse parallax tracking using quickTo for memory optimization
+		// Mouse parallax tracking — only on non-touch devices
+		const isTouch = window.matchMedia('(pointer: coarse)').matches;
+		if (isTouch) return;
+
 		const textXTo = gsap.quickTo([titleRef1.current, titleRef2.current], "x", { duration: 1, ease: 'power2.out' });
 		const textYTo = gsap.quickTo([titleRef1.current, titleRef2.current], "y", { duration: 1, ease: 'power2.out' });
 		const carXTo = gsap.quickTo(carRef.current, "x", { duration: 1, ease: 'power2.out' });
@@ -58,26 +61,26 @@ export default function Hero() {
 				<div className="w-[120%] h-[2px] bg-[#dc143c] rotate-[-15deg] shadow-[0_0_30px_rgba(220,20,60,0.8)]"></div>
 			</div>
 
-			<div className="relative z-10 flex flex-col items-center justify-center text-center text-lavender-mist w-full -translate-y-[8vh]">
+			<div className="relative z-10 flex flex-col items-center justify-center text-center text-lavender-mist w-full -translate-y-[4vh] md:-translate-y-[8vh]">
 				<div className="overflow-hidden p-2">
-					<h1 ref={titleRef1} className="font-anton text-[22vw] tracking-wider leading-none m-0 uppercase drop-shadow-lg">
+					<h1 ref={titleRef1} className="font-anton text-[28vw] md:text-[24vw] tracking-wider leading-none m-0 uppercase drop-shadow-lg">
 						NODUS
 					</h1>
 				</div>
 
-				<div className="overflow-hidden -mt-[4vw] p-2">
-					<h1 ref={titleRef2} className="font-anton text-[22vw] tracking-wider leading-none m-0 uppercase drop-shadow-lg">
+				<div className="overflow-hidden -mt-[4vw] md:-mt-[5vw] p-2">
+					<h1 ref={titleRef2} className="font-anton text-[28vw] md:text-[24vw] tracking-wider leading-none m-0 uppercase drop-shadow-lg">
 						RACING
 					</h1>
 				</div>
 			</div>
 
-			<div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none translate-y-[16vh] mix-blend-luminosity">
+			<div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none translate-y-[10vh] md:translate-y-[16vh] mix-blend-luminosity">
 				<img
 					ref={carRef}
 					src="/pictures/car.png"
 					alt="Nodus Racing"
-					className="w-[105%] max-w-[100rem] object-contain drop-shadow-[0_45px_35px_rgba(0,0,0,0.8)] will-change-transform"
+					className="w-[130%] md:w-[105%] max-w-[100rem] object-contain drop-shadow-[0_45px_35px_rgba(0,0,0,0.8)] will-change-transform"
 				/>
 			</div>
 		</section>

@@ -22,12 +22,12 @@ export default function AuthorityBar() {
 	}, { scope: barRef });
 
 	return (
-		<section ref={barRef} className="w-full bg-[#050605] py-10 px-12 border-t border-white/10 relative overflow-hidden">
+		<section ref={barRef} className="w-full bg-[#050605] py-5 md:py-10 px-5 md:px-12 border-t border-white/10 relative overflow-hidden">
 			{/* Crimson accent line at the top */}
 			<div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#0a1b3a] to-transparent opacity-50"></div>
 			
-			<div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 md:gap-4">
-				<div className="auth-item flex items-center justify-center w-64 hover-target">
+			<div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-5 md:gap-4">
+				<div className="auth-item flex items-center justify-center w-36 md:w-64 hover-target">
 					<img
 						src="/srm-logo.svg"
 						alt="SRM Institute of Science & Technology"
@@ -36,19 +36,19 @@ export default function AuthorityBar() {
 				</div>
 
 				<div className="auth-item text-center flex flex-col items-center">
-					<span className="text-5xl font-normal text-lavender-mist tracking-wide">
+					<span className="text-2xl md:text-5xl font-normal text-lavender-mist tracking-wide">
 						NAAC A++
 					</span>
-					<span className="text-base tracking-[0.15em] mt-1 text-[#406eb5]">
+					<span className="text-xs md:text-base tracking-[0.15em] mt-1 text-[#406eb5]">
 						ACCREDITED
 					</span>
 				</div>
 
 				<div className="auth-item text-center flex flex-col items-center">
-					<span className="text-5xl font-normal text-lavender-mist tracking-wide">
+					<span className="text-2xl md:text-5xl font-normal text-lavender-mist tracking-wide">
 						UGC CATEGORY-I
 					</span>
-					<span className="text-base tracking-[0.15em] mt-1 text-[#406eb5]">
+					<span className="text-xs md:text-base tracking-[0.15em] mt-1 text-[#406eb5]">
 						STATUS
 					</span>
 				</div>
