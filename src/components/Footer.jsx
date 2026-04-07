@@ -104,7 +104,7 @@ export default function Footer() {
 
 				<div className="border-t border-white/10 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
 					<p className="font-inter text-[#f5f2f7]/40 text-xs md:text-sm tracking-widest uppercase">
-						© 2026 Nodus Racing. Engineered in India.
+						© 2026 Nodus Racing <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#406eb5] mx-2 align-middle"></span> NyxLumen
 					</p>
 					<img 
 						src="/logo.svg" 
