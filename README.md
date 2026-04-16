@@ -28,40 +28,7 @@ Welcome to the official digital home of **Nodus Racing**, the premier racing tea
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
 - **Scroll Hijacking:** [Lenis](https://lenis.studiofreight.com/)
 
-## 🏎️ Getting Started
 
-To get a local copy up and running, follow these simple steps.
-
-### Prerequisites
-
-You need Node.js and an npm package manager installed.
-
-### Installation
-
-1. **Clone the repository** (if applicable):
-   ```bash
-   git clone https://github.com/yourusername/nodus-racing.git
-   cd nodus-racing
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
-
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
