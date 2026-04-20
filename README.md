@@ -6,7 +6,7 @@
 [![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-> **The Official Racing Team of SRMS**
+> **The Official Racing Team of SRM NCR**
 
 Welcome to the official digital home of **Nodus Racing**, the premier racing team of SRM Institute of Science and Technology NCR-Campus. This platform is a cutting-edge web experience built to showcase our extreme motorsport dynamics, team achievements, and engineering prowess. Leveraging modern web technologies, we deliver a premium, immersive user experience with high-fidelity 3D rendering and a sleek motorsport-themed aesthetic that embodies the spirit of our team.
 
